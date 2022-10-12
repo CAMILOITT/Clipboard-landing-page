@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px; }
+
+.header {
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background-image: url("./../images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-position: top center; }
+  .header .header__logo {
+    width: 100px;
+    margin-block-end: 50px; }
+  .header .header__title {
+    margin-block-end: 10px;
+    color: #4c545d; }
+  .header .header__information {
+    max-width: 630px;
+    text-align: center;
+    color: #9fabb2; }
+  .header .header__download {
+    display: flex;
+    gap: 15px;
+    margin-block-start: 40px; }
+    .header .header__download .download__btn {
+      width: 160px;
+      padding: 10px 0;
+      border-radius: 40px;
+      outline: none;
+      border: none;
+      cursor: pointer; }
+    .header .header__download .download__btn-ios {
+      background: #26baa4;
+      color: white;
+      box-shadow: 0px 5px 10px -5px #26baa4; }
+    .header .header__download .download__btn-mac {
+      background: #6173ff;
+      color: white;
+      box-shadow: 0px 5px 10px -5px #6173ff; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px; }
+  .main .main__keepTrackSnippets {
+    margin-block-end: 80px; }
+    .main .main__keepTrackSnippets .keepTrackSnippets__title {
+      text-align: center;
+      color: #4c545d; }
+    .main .main__keepTrackSnippets .keepTrackSnippets__information {
+      max-width: 700px;
+      text-align: center;
+      color: #9fabb2;
+      margin: 20px auto 60px; }
+    .main .main__keepTrackSnippets .keepTrackSnippets__details {
+      display: flex; }
+      .main .main__keepTrackSnippets .keepTrackSnippets__details .details__img {
+        height: 520px;
+        transform: translateX(-200px); }
+      .main .main__keepTrackSnippets .keepTrackSnippets__details .details__information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; }
+        .main .main__keepTrackSnippets .keepTrackSnippets__details .details__information .information__services {
+          max-width: 350px; }
+          .main .main__keepTrackSnippets .keepTrackSnippets__details .details__information .information__services .services__title {
+            color: #4c545d; }
+          .main .main__keepTrackSnippets .keepTrackSnippets__details .details__information .information__services .services__information {
+            color: #9fabb2;
+            font-size: 0.9em; }
+  .main .main__accesClipboard .accesClipboard__title {
+    color: #4c545d;
+    text-align: center; }
+  .main .main__accesClipboard .accesClipboard__information {
+    color: #9fabb2;
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto 100px; }
+  .main .main__workflow .workflow__title {
+    color: #4c545d;
+    text-align: center; }
+  .main .main__workflow .workflow__information {
+    color: #9fabb2;
+    text-align: center;
+    margin: 20px 0 80px; }
+  .main .main__workflow .workflow__services {
+    display: inline-table;
+    max-width: 363px;
+    text-align: center;
+    font-size: 0.9em; }
+    .main .main__workflow .workflow__services .services__icon {
+      width: 40px; }
+    .main .main__workflow .workflow__services .services__title {
+      margin-block: 30px 15px;
+      color: #4c545d; }
+    .main .main__workflow .workflow__services .services__information {
+      color: #9fabb2;
+      line-height: 1.6em; }
+  .main .main__workflow .workflow__business {
+    width: 100%;
+    margin-block-start: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .main .main__workflow .workflow__business .business__icon {
+      width: 100px; }
+  .main .main__clipboard .clipboard__information .information__title {
+    color: #4c545d;
+    text-align: center; }
+  .main .main__clipboard .clipboard__information .information__details {
+    color: #9fabb2;
+    text-align: center;
+    max-width: 690px;
+    margin-block: 10px 30px; }
+  .main .main__clipboard .clipboard__download {
+    display: flex;
+    justify-content: center;
+    gap: 10px; }
+    .main .main__clipboard .clipboard__download .download__btn {
+      width: 160px;
+      padding: 10px 0;
+      border-radius: 40px;
+      outline: none;
+      border: none;
+      cursor: pointer; }
+    .main .main__clipboard .clipboard__download .download__btn-ios {
+      background: #26baa4;
+      color: white;
+      box-shadow: 0px 5px 10px -5px #26baa4; }
+    .main .main__clipboard .clipboard__download .download__btn-mac {
+      background: #6173ff;
+      color: white;
+      box-shadow: 0px 5px 10px -5px #6173ff; }
+
+.footer {
+  background: #9fabb2;
+  margin-block-start: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  padding: 40px 10px; }
+  .footer .footer__logo {
+    width: 60px; }
+  .footer .footer__about {
+    list-style: none;
+    gap: 30px;
+    columns: 3; }
+  .footer .footer__social {
+    display: flex;
+    align-items: center;
+    gap: 15px; }
+  .footer .footer__attribution {
+    position: absolute;
+    bottom: 10px; }
+
+.attribution {
+  font-size: 13px;
+  text-align: center; }
+  .attribution a {
+    font-size: 15px;
+    color: #26baa4;
+    font-weight: bold;
+    text-decoration: none; }
+    .attribution a:last-child {
+      color: #6173ff; }
+
+/*# sourceMappingURL=style.css.map */

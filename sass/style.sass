@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap')
+
+// ## Colors
+// ### Primary
+
+$StrongCyan: hsl(171, 66%, 44%)
+$LightBlue: hsl(233, 100%, 69%)
+
+// ### Neutral
+$DarkGrayishBlue: hsl(210, 10%, 33%)
+$GrayishBlue: hsl(201, 11%, 66%)
+
+// ## Typography
+// ### Body Copy
+$FontSize: 18px
+$fontFamilyBai: 'Bai Jamjuree', sans-serif
+
+@mixin downloadBtn()
+  width: 160px
+  padding: 10px 0
+  border-radius: 40px
+  outline: none
+  border: none
+  cursor: pointer
+
+@mixin downloadBtnHover($bg,$color)
+  background: $bg
+  color: $color
+  box-shadow: 0px 5px 10px -5px $bg
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+body
+  font-family: $fontFamilyBai
+  font-size: $FontSize
+
+.header
+  min-height: 560px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 0 20px
+  background-image: url('./../images/bg-header-desktop.png')
+  background-repeat: no-repeat
+  background-position: top center
+  .header__logo
+    width: 100px
+    margin-block-end: 50px
+  .header__title
+    margin-block-end: 10px
+    color: $DarkGrayishBlue
+  .header__information
+    max-width: 630px
+    text-align: center
+    color: $GrayishBlue
+  .header__download
+    display: flex
+    gap: 15px
+    margin-block-start: 40px
+    .download__btn
+      @include downloadBtn()
+    .download__btn-ios
+      @include downloadBtnHover( $StrongCyan, white)
+    .download__btn-mac
+      @include downloadBtnHover( $LightBlue, white)
+
+.main
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 60px
+  .main__keepTrackSnippets
+    margin-block-end: 80px
+    .keepTrackSnippets__title
+      text-align: center
+      color: $DarkGrayishBlue
+    .keepTrackSnippets__information
+      max-width: 700px
+      text-align: center
+      color: $GrayishBlue
+      margin: 20px auto 60px
+    .keepTrackSnippets__details
+      display: flex
+      .details__img
+        height: 520px
+        transform: translateX(-200px)
+      .details__information
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        .information__services
+          max-width: 350px
+          .services__title
+            color: $DarkGrayishBlue
+          .services__information
+            color: $GrayishBlue
+            font-size: .9em
+  .main__accesClipboard
+    .accesClipboard__title
+      color: $DarkGrayishBlue
+      text-align: center
+    .accesClipboard__information
+      color: $GrayishBlue
+      text-align: center
+      max-width: 700px
+      margin: 20px auto 100px
+  .main__workflow
+    .workflow__title
+      color: $DarkGrayishBlue
+      text-align: center
+    .workflow__information
+      color: $GrayishBlue
+      text-align: center
+      margin: 20px 0 80px
+    .workflow__services
+      display: inline-table
+      max-width: 363px
+      text-align: center
+      font-size: .9em
+      .services__icon
+        width: 40px
+      .services__title
+        margin-block: 30px 15px
+        color: $DarkGrayishBlue
+      .services__information
+        color: $GrayishBlue
+        line-height: 1.6em
+    .workflow__business
+      width: 100%
+      margin-block-start: 100px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .business__icon
+        width: 100px
+  .main__clipboard
+    .clipboard__information
+      .information__title
+        color: $DarkGrayishBlue
+        text-align: center
+      .information__details
+        color: $GrayishBlue
+        text-align: center
+        max-width: 690px
+        margin-block: 10px 30px
+    .clipboard__download
+      display: flex
+      justify-content: center
+      gap: 10px
+      .download__btn
+        @include downloadBtn()
+      .download__btn-ios
+        @include downloadBtnHover( $StrongCyan, white)
+      .download__btn-mac
+        @include downloadBtnHover( $LightBlue, white)
+
+.footer
+  background: $GrayishBlue
+  margin-block-start: 130px
+  display: flex
+  align-items: center
+  justify-content: space-around
+  position: relative
+  padding: 40px 10px
+  .footer__logo
+    width: 60px
+  .footer__about
+    list-style: none
+    gap: 30px
+    columns: 3
+  .footer__social
+    display: flex
+    align-items: center
+    gap: 15px
+  .footer__attribution
+    position: absolute
+    bottom: 10px
+
+.attribution
+  font-size: 13px
+  text-align: center
+  a
+    font-size: 15px
+    color: $StrongCyan
+    font-weight: bold
+    text-decoration: none
+    &:last-child
+      color: $LightBlue
