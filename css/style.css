@@ -201,6 +201,10 @@ body {
     display: flex;
     align-items: center;
     gap: 15px; }
+    .footer .footer__social svg {
+      transition: 1s; }
+      .footer .footer__social svg:hover {
+        fill: #26baa4; }
   .footer .footer__attribution {
     position: absolute;
     bottom: 10px; }
