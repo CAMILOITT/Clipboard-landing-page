@@ -9,6 +9,7 @@ $LightBlue: hsl(233, 100%, 69%)
 // ### Neutral
 $DarkGrayishBlue: hsl(210, 10%, 33%)
 $GrayishBlue: hsl(201, 11%, 66%)
+$bgFooter: hsl(220, 18%, 97%)
 
 // ## Typography
 // ### Body Copy
@@ -16,18 +17,20 @@ $FontSize: 18px
 $fontFamilyBai: 'Bai Jamjuree', sans-serif
 
 @mixin downloadBtn()
-  width: 160px
-  padding: 10px 0
+  width: 180px
+  padding: 15px 0
   border-radius: 40px
   outline: none
   border: none
   cursor: pointer
+  transition: 1s
 
 @mixin downloadBtnHover($bg,$color)
   background: $bg
   color: $color
   box-shadow: 0px 5px 10px -5px $bg
-
+  &:hover
+    filter: saturate(.83) brightness(1.12)
 *
   margin: 0
   padding: 0
@@ -52,12 +55,16 @@ body
   .header__title
     margin-block-end: 10px
     color: $DarkGrayishBlue
+    text-align: center
   .header__information
     max-width: 630px
     text-align: center
     color: $GrayishBlue
   .header__download
     display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
     gap: 15px
     margin-block-start: 40px
     .download__btn
@@ -72,6 +79,7 @@ body
   flex-direction: column
   align-items: center
   gap: 60px
+  padding: 0 10px
   .main__keepTrackSnippets
     margin-block-end: 80px
     .keepTrackSnippets__title
@@ -85,7 +93,7 @@ body
     .keepTrackSnippets__details
       display: flex
       .details__img
-        height: 520px
+        width: clamp( 400px, 46vw, 683px)
         transform: translateX(-200px)
       .details__information
         display: flex
@@ -93,8 +101,10 @@ body
         justify-content: space-evenly
         .information__services
           max-width: 350px
+          padding-inline-end: 50px
           .services__title
             color: $DarkGrayishBlue
+            margin-block-end: 15px
           .services__information
             color: $GrayishBlue
             font-size: .9em
@@ -107,7 +117,12 @@ body
       text-align: center
       max-width: 700px
       margin: 20px auto 100px
+    .accesClipboard__img
+      width: clamp(200px, 90vw, 905px)
   .main__workflow
+    display: flex
+    flex-direction: column
+    align-items: center
     .workflow__title
       color: $DarkGrayishBlue
       text-align: center
@@ -116,24 +131,31 @@ body
       text-align: center
       margin: 20px 0 80px
     .workflow__services
-      display: inline-table
-      max-width: 363px
-      text-align: center
-      font-size: .9em
-      .services__icon
-        width: 40px
-      .services__title
-        margin-block: 30px 15px
-        color: $DarkGrayishBlue
-      .services__information
-        color: $GrayishBlue
-        line-height: 1.6em
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+      .services__services
+        max-width: 363px
+        text-align: center
+        font-size: .9em
+        .services__icon
+          width: 40px
+        .services__title
+          margin-block: 30px 15px
+          color: $DarkGrayishBlue
+        .services__information
+          color: $GrayishBlue
+          line-height: 1.6em
     .workflow__business
       width: 100%
       margin-block-start: 100px
       display: flex
-      justify-content: space-between
+      justify-content: center
       align-items: center
+      flex-wrap: wrap
+      gap: 30px
+      padding: 20px
       .business__icon
         width: 100px
   .main__clipboard
@@ -148,6 +170,7 @@ body
         margin-block: 10px 30px
     .clipboard__download
       display: flex
+      flex-wrap: wrap
       justify-content: center
       gap: 10px
       .download__btn
@@ -158,19 +181,28 @@ body
         @include downloadBtnHover( $LightBlue, white)
 
 .footer
-  background: $GrayishBlue
+  background: $bgFooter
   margin-block-start: 130px
   display: flex
   align-items: center
   justify-content: space-around
   position: relative
   padding: 40px 10px
+  flex-wrap: wrap
+  gap: 15px
   .footer__logo
     width: 60px
   .footer__about
     list-style: none
     gap: 30px
     columns: 3
+    a
+      text-decoration: none
+      color: $DarkGrayishBlue
+      margin-block: 10px
+      display: inline-block
+      &:hover
+        color: $StrongCyan
   .footer__social
     display: flex
     align-items: center
@@ -189,3 +221,20 @@ body
     text-decoration: none
     &:last-child
       color: $LightBlue
+
+@media screen and (max-width:625px)
+  .main
+    .main__keepTrackSnippets
+      .keepTrackSnippets__details
+        flex-direction: column
+        align-items: center
+        gap: 20px
+        .details__img
+          width: 95%
+          transform: translateX(0)
+        .details__information
+          gap: 20px
+          text-align: center
+          .information__services
+            width: 100%
+            padding-inline-end: 0
